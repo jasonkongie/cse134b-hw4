@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img[src="brandon.jpg"] {
+  content: url("brandon.jpeg");
+}
+
+:root {
+  --primaryColor: color-mix(in srgb, teal 80%, white);
+  --secondaryColor: #FF5722;
+  --mainFont: 'Open+Sans', Arial, sans-serif;
+  --headingFont: Georgia, 'Times New Roman', serif;
+  --transitionSpeed: 0.3s;
+  --hoverScale: 1.05;
+}
+
+body {
+  font-family: var(--mainFont, sans-serif);
+  background-color: var(--primaryColor, teal);
+  color: #333;
+  min-height: 100dvh;
+  line-height: 1.6;
+}
+
+header, footer, nav, main, section, article, aside {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+header h1 {
+  font-family: var(--headingFont, serif);
+  animation: pulse 3s infinite alternate ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.02); }
+}
+
+header nav {
+  width: 100%;
+  background-color: #2c3e50;
+  padding: 1rem 0;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+header nav ul li a {
+  color: var(--secondaryColor);
+  text-decoration: none;
+  transition: color var(--transitionSpeed) ease, transform var(--transitionSpeed) ease;
+  font-size: 1.25rem;
+}
+
+header nav ul li a:hover {
+  color: #E91E63;
+  transform: scale(var(--hoverScale));
+}
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  min-height: 70dvh;
+  padding: 2rem;
+}
+
+@scope (main > section) {
+  figure img {
+    object-fit: cover;
+    object-position: center;
+    max-width: 100%;
+    height: auto;
+    transition: transform var(--transitionSpeed) ease;
+  }
+  figure img:hover {
+    transform: scale(var(--hoverScale));
+  }
+}
+
+aside:has(h3) {
+  border: 2px dashed var(--secondaryColor);
+}
+
+footer {
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  header, footer, nav, main, section, article, aside {
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+}

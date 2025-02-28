@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Connect with Me! - Brandon's Research Hub">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect with Me! - Brandon's Research Hub</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { margin: 0; border: 1px solid black; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Connect with Me!</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">BLOG</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="research.html">Research Data</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="labs.html">Labs</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Get in Touch</h2>
+      <figure>
+        <img src="images/socials.jpg" alt="Social media connections" loading="lazy">
+      </figure>
+      <p>Reach out through your preferred method:</p>
+      <ul>
+        <li><a href="mailto:brandon@ucsd.edu">Email</a></li>
+        <li><a href="https://www.facebook.com/brandon.xu.520" target="_blank">Facebook</a></li>
+        <li><a href="https://instagram.com/brandon_posts" target="_blank">Instagram</a></li>
+      </ul>
+    </section>
+    <section>
+      <h3>Contact Form</h3>
+      <form action="submit_form" method="post">
+        <fieldset>
+          <legend>Contact Details</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <br>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message"></textarea>
+        </fieldset>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Brandon's Research Hub</p>
+  </footer>
+</body>
+</html>

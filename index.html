@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Brandon's Addiction Research & Connections">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Addiction, Research, Psychiatry, Brandon">
+  <meta property="og:title" content="Brandon's Addiction Research & Connections">
+  <meta property="og:description" content="A central hub for addiction research and networking by Brandon.">
+  <meta property="og:url" content="https://glistening-smakager-301386.netlify.app/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="styles.css">
+  <title>Brandon's Addiction Research & Connections</title>
+  <style>
+    body { margin: 0; border: 1px solid black; }
+    header, footer, nav, main, section { padding: 10px; margin: 10px; }
+    custom-box { display: block; border: 1px solid black; padding: 5px; margin: 5px; }
+  </style>
+  <script>
+    class HelloWorld extends HTMLElement {
+      constructor() {
+        super();
+        console.log("Hello world!");
+      }
+    }
+    customElements.define('hello-world', HelloWorld);
+    class CustomBox extends HTMLElement {
+      constructor() {
+        super();
+      }
+    }
+    customElements.define('custom-box', CustomBox);
+  </script>
+</head>
+<body>
+  <header>
+    <hgroup>
+      <h1>Brandon's Addiction Research & Connections</h1>
+    </hgroup>
+    <h2>Welcome to the central hub for research and networking</h2>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">BLOG</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="research.html">Research Data</a></li>
+        <li><a href="connect.html">Connect with Me!</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="labs.html">Labs</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <header>
+        <h2>Homepage</h2>
+      </header>
+      <figure>
+        <img src="images/addiction.jpg" alt="Hero image showcasing research - (https://www.nih.gov/news-events/nih-research-matters/research-hints-new-approach-addiction)" loading="lazy">
+        <figcaption>Advancing Addiction Research</figcaption>
+      </figure>
+      <p>Welcome to Brandon's portal for addiction research and connection tracking. Explore the sections to read blog posts, learn more about Brandon, and access valuable research data. Welcome, yet again.</p>
+      <custom-box>
+        <p>This is a custom styled box using a semantic CSS custom element.</p>
+      </custom-box>
+      <hello-world></hello-world>
+    </section>
+    <aside>
+      <h3>Quick Links</h3>
+      <ol>
+        <li><a href="blog.html">BLOG</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="research.html">Research Data</a></li>
+      </ol>
+      <figure>
+        <img src="images/links.jpg" alt="Center For Media Engagement - (https://mediaengagement.org/research/links/)" loading="lazy">
+      </figure>
+    </aside>
+  </main>
+  <footer>
+    <address>
+      Contact: <a href="mailto:brandon@ucsd.edu">brandon@ucsd.edu</a>
+    </address>
+    <p>&copy; 2025 Brandon's Research Hub</p>
+  </footer>
+  <noscript>
+    <p>Eable JavaScript in order to experience all features for scripting lol.</p>
+  </noscript>
+</body>
+</html>

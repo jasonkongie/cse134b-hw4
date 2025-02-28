@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Labs - Brandon's Research Hub Experiments">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Labs - Brandon's Research Hub</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { margin: 0; border: 1px solid black; }
+    canvas { border: 1px solid black; }
+  </style>
+  <script>
+    class HelloWorld extends HTMLElement {
+      constructor() {
+        super();
+        console.log("Hello world!");
+      }
+    }
+    customElements.define('hello-world', HelloWorld);
+    class CustomBox extends HTMLElement {
+      constructor() {
+        super();
+      }
+    }
+    customElements.define('custom-box', CustomBox);
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Labs and Experiments</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">BLOG</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="research.html">Research Data</a></li>
+        <li><a href="connect.html">Connect with Me!</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="labs.html">Labs</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Canvas and SVG Experiment</h2>
+      <figure>
+        <img src="images/lab-equipment.jpg" alt="Lab equipment" loading="lazy">
+        <figcaption>Lab setup in progress</figcaption>
+      </figure>
+      <canvas id="myCanvas" width="200" height="100"></canvas>
+      <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="2" fill="red"></circle>
+      </svg>
+    </section>
+    <section>
+      <h2>Media and Interactive Elements</h2>
+      <figure>
+        <picture>
+          <source srcset="images/brandon.webp" type="image/webp">
+          <img src="brandon.jpg" alt="Brandon" loading="lazy">
+        </picture>
+      </figure>
+      <audio controls>
+        <source src="audio/sample.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <video width="320" height="240" controls>
+        <source src="video/sample.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+    <section>
+      <h2>Form and Table Elements</h2>
+      <form action="submit" method="post">
+        <fieldset>
+          <legend>Experiment Form</legend>
+          <label for="experiment">Experiment Name:</label>
+          <input type="text" id="experiment" name="experiment">
+          <br>
+          <label for="description">Description:</label>
+          <textarea id="description" name="description"></textarea>
+          <br>
+          <label for="options">Choose an option:</label>
+          <select id="options" name="options">
+            <optgroup label="Group 1">
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+            </optgroup>
+            <optgroup label="Group 2">
+              <option value="3">Option 3</option>
+              <option value="4">Option 4</option>
+            </optgroup>
+          </select>
+          <br>
+          <datalist id="suggestions">
+            <option value="Suggestion 1">
+            <option value="Suggestion 2">
+          </datalist>
+          <input list="suggestions" name="suggestion">
+          <br>
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+      <table>
+        <caption>Experiment Data</caption>
+        <colgroup>
+          <col style="width: 50%;">
+          <col style="width: 50%;">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alpha</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>Beta</td>
+            <td>20</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section>
+      <h2>Miscellaneous Semantic Elements</h2>
+      <blockquote cite="https://example.com">
+        <p>This is a blockquote example with a citaton.</p>
+      </blockquote>
+      <cite>Example Source</cite>
+      <p><ins>Inserted text example</ins> and <del>deleted text example</del>.</p>
+      <search>
+        <p>Custom search element placeholder.</p>
+      </search>
+      <dialog open>
+        <p>This is a dialog element.</p>
+        <button>Close</button>
+      </dialog>
+      <address>
+        123 Research Lane, Science City, CA
+      </address>
+      <hgroup>
+        <h2>Grouped Heading 1</h2>
+      </hgroup>
+      <h3>Grouped Heading 2</h3>
+      <dl>
+        <dt>Term</dt>
+        <dd>Definition</dd>
+      </dl>
+      <abbr title="Abbreviation">abbr</abbr>
+      <dfn>Definition Term</dfn>
+      <kbd>Ctrl + C</kbd>
+      <div>
+        <span><b>Bold text</b> and <i>italic text</i> with <strong>strong emphasis</strong> and <em>emphasis</em>.</span>
+      </div>
+      <pre>
+Sample preformatted text.
+Line 2.
+      </pre>
+      <code>var x = 10;</code>
+      <details>
+        <summary>More Info</summary>
+        <p>Additional details shown when expanded.</p>
+      </details>
+    </section>
+    <section>
+      <h2>MathML Extra Credit</h2>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <mi>E</mi>
+        <mo>=</mo>
+        <mi>m</mi>
+        <msup>
+          <mi>c</mi>
+          <mn>2</mn>
+        </msup>
+      </math>
+    </section>
+    <section>
+      <h2>Template Element</h2>
+      <template id="sampleTemplate">
+        <p>This is content inside a template element.</p>
+      </template>
+      <button type="button" onclick="document.body.insertAdjacentHTML('beforeend', document.getElementById('sampleTemplate').innerHTML)">Show Template Content</button>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Brandon's Research Hub Labs</p>
+  </footer>
+  <noscript>
+    <p>Please enable JavaScript for full functionality.</p>
+  </noscript>
+</body>
+</html>
