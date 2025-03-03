@@ -2,12 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Contact Form (JS Enhanced Validation)">
+  <meta name="description" content="Contact Form (JS Enhanced)">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Form (JS Enhanced)</title>
   <link rel="stylesheet" href="styles.css">
-  
-  <!--CSS part right heree-->
   <style>
     body.light-theme {
       background: #fafafa;
@@ -16,6 +14,14 @@
     body.dark-theme {
       background: #1e1e1e;
       color: #ddd;
+    }
+    body.blue-theme {
+      background: #e0f0ff;
+      color: #003366;
+    }
+    body.green-theme {
+      background: #e6ffe6;
+      color: #003300;
     }
     form {
       display: flex;
@@ -62,16 +68,61 @@
       padding: 0.5rem 1rem;
       font-size: 1rem;
     }
+    .theme-customizer {
+      max-width: 400px;
+      margin: 1rem auto;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .theme-customizer input,
+    .theme-customizer select,
+    .theme-customizer button {
+      padding: 0.5rem;
+      width: 100%;
+    }
   </style>
-
-
-
-
 </head>
 <body>
   <header>
     <h1>Enhanced Contact Form</h1>
   </header>
+  <div class="theme-customizer">
+    <h2>Custom Theme Picker</h2>
+
+
+    <label for="preset-theme">Preset Theme:</label>
+    <select id="preset-theme">
+      
+      <option value="">--Select a Preset--</option>
+      <option value="light-theme">Light Theme</option>
+      <option value="dark-theme">Dark Theme</option>
+      <option value="blue-theme">Blue Theme</option>
+      <option value="green-theme">Green Theme</option>
+    </select>
+    <label for="custom-bg">Background Color:</label>
+    <input type="color" id="custom-bg" value="#ffffff">
+    <label for="custom-text">Text Color:</label>
+    <input type="color" id="custom-text" value="#000000">
+    <label for="custom-font">Font Family:</label>
+    <select id="custom-font">
+      <option value="sans-serif">Sans-serif</option>
+      <option value="serif">Serif</option>
+      <option value="monospace">Monospace</option>
+    </select>
+    <label for="theme-name">Theme Name:</label>
+    <input type="text" id="theme-name" placeholder="Enter theme name">
+    <button id="save-theme">Save Theme</button>
+    <label for="saved-themes">Saved Themes:</label>
+    <select id="saved-themes">
+      <option value="">--Select Saved Theme--</option>
+    </select>
+
+
+    <button id="apply-saved-theme">Apply Saved Theme</button>
+  </div>
   <button id="theme-toggle">Toggle Theme</button>
   <main>
     <form action="https://httpbin.org/post" method="POST" id="enhancedForm">
@@ -84,6 +135,8 @@
       <label for="comments" class="required">Comments</label>
       <textarea id="comments" name="comments" required minlength="5" maxlength="120" pattern="[A-Za-z0-9À-ÖØ-öø-ÿ .,!?'-]+" placeholder="Enter your comments"></textarea>
       <div class="messages">
+
+
         <output id="error-message"></output>
         <output id="info-message"></output>
       </div>
