@@ -1,0 +1,11 @@
+{
+  "name": "my-ssg-site",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npx eleventy",
+    "start": "npx eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0"
+  }
+}
